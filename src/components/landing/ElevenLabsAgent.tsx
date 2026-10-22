@@ -5,7 +5,7 @@ import { MessageCircle, Send, X, Globe } from "lucide-react";
 import { toast } from "sonner";
 import { useT, useLang } from "@/lib/i18n";
 
-const AGENT_ID = "agent_6801kmeppancea2sswf8akf38amk";
+const AGENT_ID = import.meta.env.VITE_ELEVENLABS_AGENT_ID || "agent_3001m5j8gvcrez6asz0dgt6f0b3j";
 
 const LANGUAGES = [
   { code: "it", label: "🇮🇹 Italiano" },
