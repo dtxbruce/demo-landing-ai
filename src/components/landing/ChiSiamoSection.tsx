@@ -17,7 +17,7 @@ export function ChiSiamoSection() {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-            {t("about.title")} <span className="text-gradient-sunflower">Sunflowers</span>?
+            {t("about.title")} <span className="text-gradient-sunflower">STONE MLM DEMO</span>?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-4">
             {t("about.p1")}

@@ -33,7 +33,7 @@ export function HeroSection({ manager, codice }: HeroSectionProps) {
           transition={{ duration: 0.7 }}
           className="text-center mb-10"
         >
-          <img src={logo} alt="Sunflowers" className="h-20 mb-5" />
+          <img src={logo} alt="STONE MLM DEMO" className="h-20 mb-5" />
           <h1 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight mb-4">
             {t("hero.title")}{" "}
             <span className="text-gradient-sunflower">{t("hero.titleHighlight")}</span>

@@ -21,14 +21,14 @@ const translations = {
     pl: "światłem zmiany",
   },
   "hero.subtitle": {
-    it: "SUNFLOWERS si prende cura del benessere fisico e mentale con integratori alimentari di alta qualità. Un movimento di crescita personale e libertà imprenditoriale.",
-    en: "SUNFLOWERS takes care of your physical and mental well-being with high-quality dietary supplements. A movement of personal growth and entrepreneurial freedom.",
-    pl: "SUNFLOWERS dba o Twoje zdrowie fizyczne i psychiczne dzięki wysokiej jakości suplementom diety. Ruch osobistego rozwoju i wolności przedsiębiorczej.",
+    it: "STONE MLM DEMO si prende cura del benessere fisico e mentale con integratori alimentari di alta qualità. Un movimento di crescita personale e libertà imprenditoriale.",
+    en: "STONE MLM DEMO takes care of your physical and mental well-being with high-quality dietary supplements. A movement of personal growth and entrepreneurial freedom.",
+    pl: "STONE MLM DEMO dba o Twoje zdrowie fizyczne i psychiczne dzięki wysokiej jakości suplementom diety. Ruch osobistego rozwoju i wolności przedsiębiorczej.",
   },
   "hero.managerLabel": {
-    it: "Il tuo Manager Sunflowers",
-    en: "Your Sunflowers Manager",
-    pl: "Twój Manager Sunflowers",
+    it: "Il tuo Manager STONE MLM DEMO",
+    en: "Your STONE MLM DEMO Manager",
+    pl: "Twój Manager STONE MLM DEMO",
   },
 
   // ─── Chat ───
@@ -45,9 +45,9 @@ const translations = {
     pl: "Napisz wiadomość...",
   },
   "chat.startPrompt": {
-    it: 'Premi "Avvia chat" per chiedere all\'assistente qualsiasi informazione sui prodotti, sulla azienda o sulle possibilità di guadagno di Sunflowers',
-    en: 'Press "Start chat" to ask the assistant anything about products, the company, or earning opportunities with Sunflowers',
-    pl: 'Naciśnij "Rozpocznij czat", aby zapytać asystenta o produkty, firmę lub możliwości zarobku w Sunflowers',
+    it: 'Premi "Avvia chat" per chiedere all\'assistente qualsiasi informazione sui prodotti, sulla azienda o sulle possibilità di guadagno di STONE MLM DEMO',
+    en: 'Press "Start chat" to ask the assistant anything about products, the company, or earning opportunities with STONE MLM DEMO',
+    pl: 'Naciśnij "Rozpocznij czat", aby zapytać asystenta o produkty, firmę lub możliwości zarobku w STONE MLM DEMO',
   },
   "chat.start": { it: "Avvia chat", en: "Start chat", pl: "Rozpocznij czat" },
   "chat.connecting": { it: "Connessione...", en: "Connecting...", pl: "Łączenie..." },
@@ -57,9 +57,9 @@ const translations = {
   // ─── Chi siamo ───
   "about.title": { it: "Chi è", en: "Who is", pl: "Kim jest" },
   "about.p1": {
-    it: "SUNFLOWERS si prende cura del benessere fisico e mentale, con una linea di integratori alimentari di alta qualità dedicati sia alle persone sia ai loro amici a quattro zampe.",
-    en: "SUNFLOWERS takes care of physical and mental well-being, with a line of high-quality dietary supplements for both people and their four-legged friends.",
-    pl: "SUNFLOWERS dba o zdrowie fizyczne i psychiczne, oferując linię wysokiej jakości suplementów diety zarówno dla ludzi, jak i ich czworonożnych przyjaciół.",
+    it: "STONE MLM DEMO si prende cura del benessere fisico e mentale, con una linea di integratori alimentari di alta qualità dedicati sia alle persone sia ai loro amici a quattro zampe.",
+    en: "STONE MLM DEMO takes care of physical and mental well-being, with a line of high-quality dietary supplements for both people and their four-legged friends.",
+    pl: "STONE MLM DEMO dba o zdrowie fizyczne i psychiczne, oferując linię wysokiej jakości suplementów diety zarówno dla ludzi, jak i ich czworonożnych przyjaciół.",
   },
   "about.p2": {
     it: "Non è solo salute: è un movimento di crescita personale e libertà imprenditoriale, dove la voglia di mettersi in gioco si unisce alla passione per il benessere.",
@@ -139,9 +139,9 @@ const translations = {
   "events.title": { it: "in programma", en: "Upcoming", pl: "Nadchodzące" },
   "events.titleHighlight": { it: "Eventi", en: "Events", pl: "Wydarzenia" },
   "events.subtitle": {
-    it: "Partecipa ai nostri eventi per scoprire di più su Sunflowers e il nostro progetto.",
-    en: "Join our events to learn more about Sunflowers and our project.",
-    pl: "Weź udział w naszych wydarzeniach, aby dowiedzieć się więcej o Sunflowers i naszym projekcie.",
+    it: "Partecipa ai nostri eventi per scoprire di più su STONE MLM DEMO e il nostro progetto.",
+    en: "Join our events to learn more about STONE MLM DEMO and our project.",
+    pl: "Weź udział w naszych wydarzeniach, aby dowiedzieć się więcej o STONE MLM DEMO i naszym projekcie.",
   },
   "events.virtual": { it: "Evento virtuale", en: "Virtual event", pl: "Wydarzenie wirtualne" },
   "events.participate": { it: "Chiedi di partecipare", en: "Request to participate", pl: "Poproś o udział" },
@@ -173,9 +173,9 @@ const translations = {
   "contact.title": { it: "Restiamo in", en: "Let's stay in", pl: "Pozostańmy w" },
   "contact.titleHighlight": { it: "contatto", en: "touch", pl: "kontakcie" },
   "contact.subtitle": {
-    it: "Scegli il modo che preferisci per contattare il tuo Manager Sunflowers.",
-    en: "Choose your preferred way to contact your Sunflowers Manager.",
-    pl: "Wybierz preferowany sposób kontaktu z Twoim Managerem Sunflowers.",
+    it: "Scegli il modo che preferisci per contattare il tuo Manager STONE MLM DEMO.",
+    en: "Choose your preferred way to contact your STONE MLM DEMO Manager.",
+    pl: "Wybierz preferowany sposób kontaktu z Twoim Managerem STONE MLM DEMO.",
   },
   "contact.call": { it: "Prenota una call", en: "Book a call", pl: "Zarezerwuj rozmowę" },
   "contact.callDesc": {

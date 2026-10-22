@@ -57,7 +57,7 @@ export function ManagerCard({ manager }: ManagerCardProps) {
 
             <div className="p-8 flex flex-col justify-center">
               <p className="text-sm font-semibold text-sunflower-dark uppercase tracking-wider mb-2">
-                Il tuo Manager Sunflowers
+                Il tuo Manager STONE MLM DEMO
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">{manager.bio}</p>
               <blockquote className="border-l-4 border-sunflower pl-4 italic text-foreground/80">
