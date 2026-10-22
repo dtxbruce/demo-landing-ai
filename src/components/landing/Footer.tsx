@@ -1,4 +1,4 @@
-import logo from "@/assets/sunflowers-logo.png";
+import logo from "@/assets/datex-logo.png";
 import { useT } from "@/lib/i18n";
 
 export function Footer() {
@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-navy py-10">
       <div className="container mx-auto px-6 text-center">
-        <img src={logo} alt="STONE MLM DEMO" className="h-10 mx-auto mb-4 brightness-0 invert" />
+        <img src={logo} alt="Datex" className="h-10 mx-auto mb-4" />
         <p className="text-primary-foreground/50 text-sm">
           © {new Date().getFullYear()} STONE MLM DEMO Europe |{" "}
           <a
