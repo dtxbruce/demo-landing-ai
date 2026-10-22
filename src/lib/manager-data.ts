@@ -1,5 +1,10 @@
 
 
+export interface ManagerVideo {
+  url: string;
+  description: string;
+}
+
 export interface ManagerData {
   id: string;
   identificativo: string;
@@ -10,6 +15,7 @@ export interface ManagerData {
   email: string;
   bio: string;
   welcomeMessage: string;
+  active: boolean;
   calendarUrl?: string;
   whatsappNumber?: string;
   socials?: {
@@ -17,10 +23,22 @@ export interface ManagerData {
     instagram?: string;
     linkedin?: string;
   };
+  videos: ManagerVideo[];
 }
 
 function stripHtml(html: string): string {
   return html.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]*>/g, "").trim();
+}
+
+function parseVideos(d: any): ManagerVideo[] {
+  const videos: ManagerVideo[] = [];
+  for (let i = 1; i <= 5; i++) {
+    const url = d[`video_url${i}`];
+    if (url) {
+      videos.push({ url, description: d[`video_descr${i}`] || "" });
+    }
+  }
+  return videos;
 }
 
 function parsePhoto(value: string | undefined): string {
@@ -63,6 +81,7 @@ export async function fetchManagerData(codice: string): Promise<ManagerData> {
     email: d.email || "",
     bio: stripHtml(d.testo_bio || ""),
     welcomeMessage: stripHtml(d.testo_benvenuto || ""),
+    active: d.attiva === undefined || d.attiva === "1" || d.attiva === 1,
     calendarUrl: d.cal_url || undefined,
     whatsappNumber: d.wa_cell || undefined,
     socials: {
@@ -70,6 +89,7 @@ export async function fetchManagerData(codice: string): Promise<ManagerData> {
       facebook: d.fb || undefined,
       linkedin: d.ln ? (d.ln.startsWith("http") ? d.ln : `https://${d.ln}`) : undefined,
     },
+    videos: parseVideos(d),
   };
 }
 
@@ -85,6 +105,7 @@ export function getDefaultManager(): ManagerData {
     email: "agente01@test.it",
     bio: "Da oltre 5 anni nel mondo del benessere, aiuto le persone a scoprire il loro potenziale attraverso prodotti di qualità e un percorso di crescita personale.",
     welcomeMessage: "Ciao! Sono felice che tu sia qui. Sono pronta ad accompagnarti in questo viaggio verso il benessere e la crescita personale.\nNon esitare a contattarmi!\n\nLa mia email è aaa@dddd.it",
+    active: true,
     calendarUrl: "https://calendly.com/gigetto",
     whatsappNumber: "33333333333333",
     socials: {
@@ -92,5 +113,6 @@ export function getDefaultManager(): ManagerData {
       facebook: "https://www.facebook.com/StoneMLM2xxxx/",
       linkedin: "https://linkedin.com/showcase/stone-mlm-multi-level-marketingxxx/",
     },
+    videos: [],
   };
 }

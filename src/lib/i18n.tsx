@@ -144,6 +144,13 @@ const translations = {
     pl: "Weź udział w naszych wydarzeniach, aby dowiedzieć się więcej o STONE MLM DEMO i naszym projekcie.",
   },
   "events.virtual": { it: "Evento virtuale", en: "Virtual event", pl: "Wydarzenie wirtualne" },
+  "videos.title": { it: "in evidenza", en: "Featured", pl: "Wyróżnione" },
+  "videos.titleHighlight": { it: "Video", en: "Videos", pl: "Filmy" },
+  "videos.subtitle": {
+    it: "Guarda i nostri contenuti video, selezionati per te dal tuo Manager.",
+    en: "Watch our video content, selected for you by your Manager.",
+    pl: "Obejrzyj nasze materiały wideo, wybrane dla Ciebie przez Twojego Managera.",
+  },
   "events.participate": { it: "Chiedi di partecipare", en: "Request to participate", pl: "Poproś o udział" },
   "events.dialog.title": { it: "Chiedi di partecipare", en: "Request to participate", pl: "Poproś o udział" },
   "events.dialog.name": { it: "Nome", en: "First name", pl: "Imię" },

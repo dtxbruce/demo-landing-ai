@@ -1,6 +1,6 @@
 export const config = { runtime: "edge" };
 
-const API_BASE = "https://sun-api-wld39hs72m.datexit.com/api_ai/test/StoneMLMServiceAI.svc/json";
+const API_BASE = "https://dtx-api-demo.datexit.com/api_ai/StoneMLMServiceAI.svc/json";
 
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== "POST") {

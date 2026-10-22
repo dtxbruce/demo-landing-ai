@@ -7,6 +7,7 @@ import { ChiSiamoSection } from "@/components/landing/ChiSiamoSection";
 import { ProdottiSection } from "@/components/landing/ProdottiSection";
 import { OpportunitaSection } from "@/components/landing/OpportunitaSection";
 import { EventiSection } from "@/components/landing/EventiSection";
+import { VideoSection } from "@/components/landing/VideoSection";
 import { ContattiSection } from "@/components/landing/ContattiSection";
 import { Footer } from "@/components/landing/Footer";
 import { Globe } from "lucide-react";
@@ -55,6 +56,14 @@ const Index = () => {
     );
   }
 
+  if (!manager.active) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <p className="text-xl text-muted-foreground font-semibold">Pagina non attiva</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen relative">
       {/* Language Switcher - floating top right */}
@@ -78,6 +87,7 @@ const Index = () => {
 
       <HeroSection manager={manager} codice={manager.id} />
       <EventiSection agentId={manager.id} />
+      <VideoSection videos={manager.videos} />
       <ContattiSection manager={manager} />
       <ChiSiamoSection />
       <ProdottiSection />
