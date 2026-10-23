@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
 import { ElevenLabsAgent } from "./ElevenLabsAgent";
 import { useT } from "@/lib/i18n";
-import heroImg from "@/assets/hero-aurelia.jpg";
+import heroImg from "@/assets/hero-aurelia-v2.jpg";
 import managerPlaceholder from "@/assets/manager-placeholder.jpg";
 import type { ManagerData } from "@/lib/manager-data";
 

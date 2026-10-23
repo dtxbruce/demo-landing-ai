@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Leaf, Sparkles, Zap, Home as HomeIcon } from "lucide-react";
 import { Footer } from "@/components/landing/Footer";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const lines = [
   {
@@ -68,26 +69,36 @@ const faqs = [
 export default function Prodotti() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-6 pt-10 pb-20 max-w-4xl">
-        <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10">
-          <ArrowLeft className="w-4 h-4" />
-          Torna alla home
-        </Link>
+      <header className="relative overflow-hidden bg-gradient-navy pt-10 pb-20">
+        <div className="absolute inset-0 opacity-[0.07]" style={{
+          backgroundImage: "radial-gradient(circle at 20% 20%, white 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }} />
+        <div className="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-sunflower/10 blur-3xl" />
+        <div className="absolute -left-16 bottom-0 w-64 h-64 rounded-full bg-sunflower/10 blur-3xl" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-14"
-        >
-          <p className="text-sm font-semibold text-sunflower-dark mb-3 tracking-wide uppercase">Aurelia Wellness</p>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">I Nostri Prodotti</h1>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-            Quattro linee di prodotto pensate per il benessere quotidiano: nutrizione, bellezza, performance sportiva e stile di vita. Scoprile tutte qui sotto.
-          </p>
-        </motion.div>
+        <div className="relative container mx-auto px-6 max-w-4xl">
+          <Link to="/" className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-10">
+            <ArrowLeft className="w-4 h-4" />
+            Torna alla home
+          </Link>
 
-        <div className="space-y-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-sm font-semibold text-sunflower mb-3 tracking-wide uppercase">Aurelia Wellness</p>
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-primary-foreground mb-4">I Nostri Prodotti</h1>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-2xl">
+              Quattro linee di prodotto pensate per il benessere quotidiano: nutrizione, bellezza, performance sportiva e stile di vita.
+            </p>
+          </motion.div>
+        </div>
+      </header>
+
+      <div className="container mx-auto px-6 pb-20 max-w-4xl -mt-10 relative">
+        <div className="space-y-12">
           {lines.map((line, li) => (
             <motion.section
               key={line.name}
@@ -95,10 +106,11 @@ export default function Prodotti() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: li * 0.1 }}
+              className="bg-card rounded-2xl p-6 md:p-8 shadow-lg border border-border"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-11 h-11 rounded-xl bg-sunflower/10 flex items-center justify-center">
-                  <line.icon className="w-5 h-5 text-sunflower-dark" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-sunflower/10 flex items-center justify-center shrink-0">
+                  <line.icon className="w-6 h-6 text-sunflower-dark" />
                 </div>
                 <div>
                   <h2 className="text-xl font-display font-semibold text-foreground">{line.name}</h2>
@@ -107,7 +119,10 @@ export default function Prodotti() {
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 {line.items.map((item) => (
-                  <div key={item.name} className="bg-card rounded-xl p-5 border border-border">
+                  <div
+                    key={item.name}
+                    className="bg-background rounded-xl p-5 border border-border hover:border-sunflower/30 hover:shadow-md transition-all"
+                  >
                     <h3 className="font-semibold text-foreground mb-1.5">{item.name}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                   </div>
@@ -117,19 +132,23 @@ export default function Prodotti() {
           ))}
         </div>
 
-        <section className="mt-16 pt-12 border-t border-border">
-          <h2 className="text-2xl font-display font-semibold text-foreground mb-6">Domande frequenti</h2>
-          <div className="space-y-5">
-            {faqs.map((f) => (
-              <div key={f.q}>
-                <h3 className="font-semibold text-foreground mb-1">{f.q}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
-              </div>
+        <section className="mt-14 bg-card rounded-2xl p-6 md:p-8 border border-border">
+          <h2 className="text-2xl font-display font-semibold text-foreground mb-4">Domande frequenti</h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((f, i) => (
+              <AccordionItem key={f.q} value={`item-${i}`}>
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-sunflower-dark">
+                  {f.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </section>
 
-        <p className="text-xs text-muted-foreground/60 mt-14 pt-6 border-t border-border">
+        <p className="text-xs text-muted-foreground/60 mt-10 pt-6 border-t border-border">
           Aurelia Wellness è un'azienda di fantasia, creata a scopo dimostrativo. Nome, prodotti e formulazioni descritte non corrispondono a prodotti reali in commercio.
         </p>
       </div>
