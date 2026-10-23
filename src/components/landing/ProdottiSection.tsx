@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf, Heart, Dog } from "lucide-react";
+import { ArrowRight, Leaf, Sparkles, Zap, Home as HomeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
 
@@ -9,18 +9,23 @@ export function ProdottiSection() {
   const products = [
     {
       icon: Leaf,
-      title: t("products.natural.title"),
-      description: t("products.natural.desc"),
-    },
-    {
-      icon: Heart,
       title: t("products.vitality.title"),
       description: t("products.vitality.desc"),
     },
     {
-      icon: Dog,
-      title: t("products.pet.title"),
-      description: t("products.pet.desc"),
+      icon: Sparkles,
+      title: t("products.glow.title"),
+      description: t("products.glow.desc"),
+    },
+    {
+      icon: Zap,
+      title: t("products.energy.title"),
+      description: t("products.energy.desc"),
+    },
+    {
+      icon: HomeIcon,
+      title: t("products.home.title"),
+      description: t("products.home.desc"),
     },
   ];
 
@@ -41,7 +46,7 @@ export function ProdottiSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
           {products.map((product, i) => (
             <motion.div
               key={product.title}
@@ -49,13 +54,13 @@ export function ProdottiSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow border border-border group"
+              className="bg-card rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-border group"
             >
-              <div className="w-14 h-14 rounded-xl bg-sunflower/10 flex items-center justify-center mb-5 group-hover:bg-sunflower/20 transition-colors">
-                <product.icon className="w-7 h-7 text-sunflower-dark" />
+              <div className="w-12 h-12 rounded-xl bg-sunflower/10 flex items-center justify-center mb-4 group-hover:bg-sunflower/20 transition-colors">
+                <product.icon className="w-6 h-6 text-sunflower-dark" />
               </div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">{product.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+              <h3 className="text-lg font-display font-semibold text-foreground mb-2">{product.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{product.description}</p>
             </motion.div>
           ))}
         </div>
