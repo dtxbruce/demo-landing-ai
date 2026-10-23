@@ -12,10 +12,24 @@ import { ContattiSection } from "@/components/landing/ContattiSection";
 import { Footer } from "@/components/landing/Footer";
 import { Globe } from "lucide-react";
 
+const CODICE_STORAGE_KEY = "aurelia_codice_agente";
+
+function readStoredCodice(): string {
+  try {
+    return sessionStorage.getItem(CODICE_STORAGE_KEY) || "";
+  } catch {
+    return "";
+  }
+}
+
 const Index = () => {
   const [searchParams] = useSearchParams();
   const isPublished = !import.meta.env.DEV;
-  const codice = searchParams.get("codice") || (isPublished ? "" : "f4f2b76baab04a5ba53005ae8");
+  const codiceFromUrl = searchParams.get("codice");
+  // Se il codice non e' nell'URL (es. tornando da /i-nostri-prodotti o
+  // /piano-marketing con un link semplice "/"), lo recuperiamo da quello
+  // salvato in sessione mentre si era sulla home la prima volta.
+  const codice = codiceFromUrl || readStoredCodice() || (isPublished ? "" : "f4f2b76baab04a5ba53005ae8");
   const [manager, setManager] = useState<ManagerData | null>(null);
   const [loading, setLoading] = useState(!!codice);
   const [error, setError] = useState(!codice);
@@ -25,6 +39,12 @@ const Index = () => {
 
   useEffect(() => {
     if (!codice) return;
+    try {
+      sessionStorage.setItem(CODICE_STORAGE_KEY, codice);
+    } catch {
+      // sessionStorage non disponibile (es. private browsing): nessun problema,
+      // il codice resta comunque valido per il caricamento corrente.
+    }
     fetchManagerData(codice)
       .then(setManager)
       .catch((err) => {
