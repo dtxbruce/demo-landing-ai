@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
 
@@ -17,7 +18,7 @@ export function ChiSiamoSection() {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-            {t("about.title")} <span className="text-gradient-sunflower">STONE MLM DEMO</span>?
+            {t("about.title")} <span className="text-gradient-sunflower">Aurelia</span>?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-4">
             {t("about.p1")}
@@ -30,10 +31,10 @@ export function ChiSiamoSection() {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
           >
-            <a href="https://sunflowers25.com/" target="_blank" rel="noopener noreferrer">
+            <Link to="/i-nostri-prodotti">
               {t("about.cta")}
               <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
+            </Link>
           </Button>
         </motion.div>
       </div>

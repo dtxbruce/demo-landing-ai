@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    --background: 240 20% 97%;
-    --foreground: 235 80% 10%;
+    --background: 40 25% 98%;
+    --foreground: 220 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 235 80% 10%;
+    --card-foreground: 220 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 235 80% 10%;
+    --popover-foreground: 220 20% 12%;
 
-    --primary: 235 80% 12%;
+    --primary: 220 20% 12%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 237 25% 82%;
-    --secondary-foreground: 235 80% 12%;
+    --secondary: 150 20% 90%;
+    --secondary-foreground: 220 20% 12%;
 
-    --muted: 240 15% 92%;
-    --muted-foreground: 235 15% 45%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 45 95% 55%;
-    --accent-foreground: 235 80% 10%;
+    --accent: 160 55% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 237 20% 88%;
-    --input: 237 20% 88%;
-    --ring: 45 95% 55%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 160 55% 42%;
 
     --radius: 0.75rem;
 
-    --sunflower: 45 95% 55%;
-    --sunflower-light: 45 90% 70%;
-    --sunflower-dark: 40 90% 42%;
-    --navy: 235 80% 12%;
-    --navy-light: 237 25% 82%;
-    --lavender: 237 25% 88%;
+    --sunflower: 160 55% 42%;
+    --sunflower-light: 155 50% 65%;
+    --sunflower-dark: 162 65% 30%;
+    --navy: 220 25% 14%;
+    --navy-light: 150 20% 88%;
+    --lavender: 150 20% 92%;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Lato', sans-serif;
+    --font-display: 'Sora', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LangProvider, type Lang } from "@/lib/i18n";
 import Index from "./pages/Index.tsx";
+import Prodotti from "./pages/Prodotti.tsx";
+import PianoMarketing from "./pages/PianoMarketing.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/it" element={<LangRoute lang="it" />} />
           <Route path="/en" element={<LangRoute lang="en" />} />
           <Route path="/pl" element={<LangRoute lang="pl" />} />
+          <Route path="/i-nostri-prodotti" element={<Prodotti />} />
+          <Route path="/piano-marketing" element={<PianoMarketing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

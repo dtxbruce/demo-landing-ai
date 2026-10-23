@@ -20,7 +20,7 @@ export function ChatSection() {
               <MessageCircle className="w-5 h-5 text-sunflower" />
             </div>
             <div>
-              <p className="text-primary-foreground font-semibold text-sm">Assistente STONE MLM DEMO</p>
+              <p className="text-primary-foreground font-semibold text-sm">Assistente Aurelia</p>
               <p className="text-primary-foreground/50 text-xs">Online</p>
             </div>
           </div>
@@ -28,7 +28,7 @@ export function ChatSection() {
           <div className="bg-primary/40 rounded-xl p-5 mb-4 min-h-[260px] space-y-3">
             <div className="bg-primary-foreground/10 rounded-lg rounded-tl-none p-3 max-w-[80%]">
               <p className="text-primary-foreground/90 text-sm">
-                Ciao! 👋 Benvenuto in STONE MLM DEMO. Sono il tuo assistente virtuale.
+                Ciao! 👋 Benvenuto in Aurelia. Sono il tuo assistente virtuale.
               </p>
             </div>
             <div className="bg-primary-foreground/10 rounded-lg rounded-tl-none p-3 max-w-[80%]">

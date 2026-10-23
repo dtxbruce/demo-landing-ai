@@ -59,7 +59,7 @@ export default async function handler(req: Request): Promise<Response> {
           Authorization: `Bearer ${RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: "STONE MLM DEMO <info@datexit.com>",
+          from: "Aurelia <info@datexit.com>",
           to: [agentEmail],
           subject,
           text: body,

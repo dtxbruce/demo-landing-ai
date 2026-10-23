@@ -3,7 +3,6 @@ import { MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
 import { ElevenLabsAgent } from "./ElevenLabsAgent";
 import { useT } from "@/lib/i18n";
 import heroImg from "@/assets/hero-sunflowers.jpg";
-import logo from "@/assets/datex-logo.png";
 import managerPlaceholder from "@/assets/manager-placeholder.jpg";
 import type { ManagerData } from "@/lib/manager-data";
 
@@ -20,7 +19,7 @@ export function HeroSection({ manager, codice }: HeroSectionProps) {
     <section className="relative flex items-start overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Campo di girasoli" className="w-full h-full object-cover object-bottom" />
+        <img src={heroImg} alt="Paesaggio naturale" className="w-full h-full object-cover object-bottom" />
         <div className="absolute inset-0 bg-white/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-white/40" />
       </div>
@@ -33,7 +32,9 @@ export function HeroSection({ manager, codice }: HeroSectionProps) {
           transition={{ duration: 0.7 }}
           className="text-center mb-10"
         >
-          <img src={logo} alt="Datex" className="h-20 mb-5" />
+          <p className="font-display text-4xl md:text-5xl font-bold text-primary mb-5 tracking-tight">
+            Aurelia
+          </p>
           <h1 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight mb-4">
             {t("hero.title")}{" "}
             <span className="text-gradient-sunflower">{t("hero.titleHighlight")}</span>
