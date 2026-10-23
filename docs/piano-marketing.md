@@ -26,14 +26,14 @@ Sui volumi generati dal proprio team organizzativo, suddiviso su 5 livelli di pr
 | 5° livello | 3% |
 
 ### 4. Bonus Leadership
-Dal rango di Team Leader in su, si aggiunge un bonus generazionale calcolato sui volumi di gruppo complessivi, per premiare chi forma e sviluppa nuovi leader all'interno della propria organizzazione.
+Dalla qualifica di Team Leader in su, si aggiunge un bonus generazionale calcolato sui volumi di gruppo complessivi, per premiare chi forma e sviluppa nuovi leader all'interno della propria organizzazione.
 
 ### 5. Bonus Lifestyle
-Dal rango di Senior Leader, Aurelia riconosce un contributo mensile fisso (bonus auto/lifestyle), al raggiungimento e mantenimento dei requisiti di rango.
+Dalla qualifica di Senior Leader, Aurelia riconosce un contributo mensile fisso (bonus auto/lifestyle), al raggiungimento e mantenimento dei requisiti di qualifica.
 
-## I ranghi Aurelia
+## Le qualifiche Aurelia
 
-| Rango | Requisito principale |
+| Qualifica | Requisito principale |
 |---|---|
 | Associato | Iscrizione con Kit di Avvio |
 | Consultant Argento | 50 PV personali al mese |

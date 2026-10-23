@@ -22,12 +22,12 @@ const earnings = [
   {
     icon: Crown,
     title: "Bonus Leadership",
-    desc: "Dal rango Team Leader, bonus generazionale sui volumi di gruppo complessivi dell'organizzazione.",
+    desc: "Dalla qualifica Team Leader, bonus generazionale sui volumi di gruppo complessivi dell'organizzazione.",
   },
   {
     icon: Car,
     title: "Bonus Lifestyle",
-    desc: "Dal rango Senior Leader, contributo mensile fisso al raggiungimento e mantenimento dei requisiti di rango.",
+    desc: "Dalla qualifica Senior Leader, contributo mensile fisso al raggiungimento e mantenimento dei requisiti di qualifica.",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function PianoMarketing() {
           </div>
 
           <div>
-            <h2 className="text-lg font-display font-semibold text-foreground mb-4">I ranghi Aurelia</h2>
+            <h2 className="text-lg font-display font-semibold text-foreground mb-4">Le qualifiche Aurelia</h2>
             <div className="bg-card rounded-xl border border-border overflow-hidden">
               {ranks.map((r, i) => (
                 <div key={r.rank} className={`px-4 py-3 text-sm ${i !== ranks.length - 1 ? "border-b border-border" : ""}`}>
