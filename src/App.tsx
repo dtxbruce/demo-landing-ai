@@ -29,7 +29,6 @@ const App = () => (
           <Route path="/" element={<LangRoute lang="it" />} />
           <Route path="/it" element={<LangRoute lang="it" />} />
           <Route path="/en" element={<LangRoute lang="en" />} />
-          <Route path="/pl" element={<LangRoute lang="pl" />} />
           <Route path="/i-nostri-prodotti" element={<Prodotti />} />
           <Route path="/piano-marketing" element={<PianoMarketing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

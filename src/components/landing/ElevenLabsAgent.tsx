@@ -10,7 +10,6 @@ const AGENT_ID = import.meta.env.VITE_ELEVENLABS_AGENT_ID || "agent_3001m5j8gvcr
 const LANGUAGES = [
   { code: "it", label: "🇮🇹 Italiano" },
   { code: "en", label: "🇬🇧 English" },
-  { code: "pl", label: "🇵🇱 Polski" },
 ];
 
 interface ChatMessage {
