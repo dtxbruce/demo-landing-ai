@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf, Heart, Dog } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
 
@@ -67,10 +66,10 @@ export function ProdottiSection() {
             size="lg"
             className="bg-sunflower text-accent-foreground hover:bg-sunflower-dark shadow-sunflower font-semibold"
           >
-            <Link to="/i-nostri-prodotti">
+            <a href="/i-nostri-prodotti" target="_blank" rel="noopener noreferrer">
               {t("products.cta")}
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

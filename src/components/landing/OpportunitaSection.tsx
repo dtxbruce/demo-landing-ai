@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Users, GraduationCap, Wallet, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
 
@@ -59,10 +58,10 @@ export function OpportunitaSection() {
             size="lg"
             className="bg-sunflower text-accent-foreground hover:bg-sunflower-dark shadow-sunflower font-semibold"
           >
-            <Link to="/piano-marketing">
+            <a href="/piano-marketing" target="_blank" rel="noopener noreferrer">
               {t("opp.cta")}
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </Button>
         </motion.div>
       </div>
